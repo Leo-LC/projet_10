@@ -125,3 +125,63 @@ Il a fallu :
 
 export const getMonth = (date) => MONTHS[date.getMonth()];
 </script>
+
+
+/* EVENTS SELECT */
+
+	1 - Changé le state de "collapsed" from newValue to true/false
+
+<script>
+	const [value, setValue] = useState();
+	const [collapsed, setCollapsed] = useState(true);
+	const changeValue = (newValue) => {
+		onChange();
+		setValue(newValue);
+		setCollapsed(!collapsed);
+	};
+</script>
+
+	2 - Changé le defaultCheck to true instead of a value : 
+
+<script>
+	{!titleEmpty && (
+		<li onClick={() => changeValue(null)}>
+			<input defaultChecked="true" name="selected" type="radio" />{" "}
+			Toutes
+		</li>
+	)}
+</script>
+
+	3 - What is this ? 
+
+<script>
+	{/*  What is this ?  */}
+	input type="hidden" value={value || ""} name={name} />
+	{/*  What is this ?  */}
+</script>
+
+	4 - Passé la nouvelle Valeur dans la fonction onChange() du selecteur pour a faire remonter dans l'evtType de l'EventList component
+
+<script>
+	const changeValue = (newValue) => {
+	setCollapsed(!collapsed);
+	setValue(newValue);
+	onChange(newValue);
+		};
+</script>
+
+	5 - Modifié le filteredEvents pour gérer le filtre en fonction du type avec .filter() ET la pagination avec .slice()
+
+<script>
+	const filteredEvents = (
+	(type
+		? data?.events?.filter((event) => event.type === type)
+		: data?.events) || []
+		).slice((currentPage - 1) * PER_PAGE, PER_PAGE * currentPage);
+</script>
+
+
+
+
+
+
