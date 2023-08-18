@@ -181,7 +181,76 @@ export const getMonth = (date) => MONTHS[date.getMonth()];
 </script>
 
 
+/* SLIDER */
 
+	1 - Réglage du problème de la slide vide : lenght-1 sur la fonction nextCard()
 
+<script>
+		const nextCard = () => {
+		setTimeout(
+			() => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
+			5000
+		);
+	};
+</script>
 
+	2 - Ajout d'une div avec key au lieu d'un fragment pour éviter le warning :
 
+<script>
+	<div className="SlideCardList">
+			{byDateDesc?.map((event, idx) => (
+				<div key={`slide-${event.title}`}>
+				/* reste du code */
+				</div>
+			))}
+	</div>
+</script>
+
+	3 - Ajout d'une key unique sur les input radio pour éviter le warning :
+	4 - Ajout d'un readOnly sur les input radio pour éviter le warning :
+
+<script>
+	<div className="SlideCard__pagination">
+		{byDateDesc.map((ev, radioIdx) => (
+			<input
+				key={`radio-${ev.title}`}
+				type="radio"
+				name="radio-button"
+				checked={index === radioIdx}
+				readOnly
+			/>
+		))}
+	</div>
+</script>
+
+	5 - Problème restant console : 
+
+<script>
+	index.js:15 Uncaught TypeError: Cannot read properties of undefined (reading 'length')
+    at index.js:15:1
+</script>
+
+	6 - Ajout de la possibilité d'arrêter le slider au press de la barre d'espace :
+
+<script>
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (!isPaused) {
+				nextCard();
+			}
+		}, 5000);
+
+		const handleKeyDown = (e) => {
+			if (e.key === " ") {
+				setIsPaused(!isPaused);
+			}
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+
+		return () => {
+			clearInterval(interval);
+			document.removeEventListener("keydown", handleKeyDown);
+		};
+	});
+</script>

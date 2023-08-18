@@ -4,7 +4,7 @@ import EventCard from "../../components/EventCard";
 import PeopleCard from "../../components/PeopleCard";
 import "./style.scss";
 import EventList from "../../containers/Events";
-/* import Slider from "../../containers/Slider"; */
+import Slider from "../../containers/Slider";
 import Logo from "../../components/Logo";
 import Icon from "../../components/Icon";
 import Form from "../../containers/Form";
@@ -20,9 +20,9 @@ const Page = () => {
 				<Menu />
 			</header>
 			<main>
-				{/*  <section className="SliderContainer">
-        <Slider />
-      </section> */}
+				<section className="SliderContainer">
+					<Slider />
+				</section>
 				<section className="ServicesContainer">
 					<h2 className="Title">Nos services</h2>
 					<p>Nous organisons des événements sur mesure partout dans le monde</p>
