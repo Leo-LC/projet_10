@@ -1,3 +1,60 @@
+# 724events Debugging Project
+
+Debugging and testing the 724events one-page website for optimal functionality.
+
+## Table of Contents
+- [Overview](#overview)
+- [Client Email](#client-email)
+- [Project Documents](#project-documents)
+- [Testing Scenarios](#testing-scenarios)
+- [Livrables](#livrables)
+- [Soutenance](#soutenance)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+As a freelance front-end developer, the task is to finalize the 724events website by resolving existing bugs and completing the testing scenarios left by the previous developer.
+
+## Client Email
+
+Received an email from Jean-Baptiste, the Marketing Director at 724events, providing project details, including the code and a testing document.
+
+**Email Details:**
+- [Jean-Baptiste's Email](jean-baptiste-email.md)
+
+## Project Documents
+
+- [Code of 724events website](link-to-github-repo)
+- [Cahier de recette](link-to-cahier-de-recette)
+
+## Testing Scenarios
+
+The testing scenarios involve completing the testing document left by the previous developer. The goal is to ensure that all mentioned issues are resolved.
+
+**Document Details:**
+- [Testing Scenarios](testing-scenarios.md)
+
+## Livrables
+
+- [GitHub Repository Link Document](livrables/github-repo-link.pdf)
+- [Completed Cahier de recette (PDF)](livrables/completed-cahier-de-recette.pdf)
+
+## Soutenance
+
+The presentation will include showcasing the website, presenting the debugged code, and explaining the use of unit tests for debugging. Additionally, the cahier de recette will be presented, including demonstrations of two functional tests.
+
+## Contributing
+
+Contributions are not applicable to this project.
+
+## License
+
+This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+
+
+
+
 # DEBUG DU SITE
 
 ## Formulaire
